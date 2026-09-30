@@ -1,4 +1,4 @@
-temp_threshold = int(input())
+temp_threshold = float(input())
 n = int(input())
 print('Ввод',temp_threshold)
 print(n)
