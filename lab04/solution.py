@@ -10,9 +10,16 @@ def average(scores: list[float]) -> float:
     avg = 0.0
     for i in range(len(scores)):
         avg += scores[i]
-    return avg / len(scores)
+    return round(avg / len(scores), 2)
 
 def ranking(names: list[str], scores: list[float]) -> list[str]:
     comb = list(zip(names.scores))
     comb.sort(key = lambda x: x[1], reverse = True)
     return [x for x, y in comb]
+
+def above_average(names: list[str], scores: list[float]) -> list[str]:
+    abv_avg = []
+    for i in range(len(scores)):
+        if average(scores) < scores[i]:
+            abv_avg.agippend(names[i])
+    return abv_avg
