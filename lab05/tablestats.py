@@ -37,6 +37,11 @@ def total_minutes(rows, kind):
                 pass
     return round(total, 1)
 
+def to_csv(counts: dict) -> str:
+    lines = ["тип,количество"]
+    for t in sorted(counts.keys()):
+        lines.append(f"{t},{counts[t]}")
+    return "\n".join(lines) + "\n"
 
 if __name__ == "__main__":
     print(read_rows(["2026-03-01,запуск,1.5", "2026-03-01,ошибка,0.4"]))
