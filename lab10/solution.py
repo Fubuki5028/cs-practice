@@ -32,7 +32,7 @@ def solve_system(matrix, vector):
 
 def tensor_channel_mean(tensor):
     t = np.array(tensor)
-    result = tp.mean(t, axis = 1)
+    result = t.mean(t, axis = 1)
     return result.tolist()
 
 def point_distance(first, second):
